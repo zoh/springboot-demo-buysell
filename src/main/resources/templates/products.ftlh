@@ -30,7 +30,7 @@
     private String author;
 -->
 <h4>Добавить новый товара</h4>
-<form action="/product/create" method="post">
+<form action="/product/create" method="post" enctype="multipart/form-data">
     <label>
         <input type="text" name="title" placeholder="Наименование">
     </label>
@@ -47,6 +47,14 @@
     <label>
         <input type="text" name="author" placeholder="Автор">
     </label>
+
+    <fieldset>
+        <caption>ФОто</caption> <br>
+
+        <input type="file" name="image1" alt="">
+        <input type="file" name="image2" alt="">
+        <input type="file" name="image3" alt="">
+    </fieldset>
 
     <button type="submit">Создать</button>
 </form>

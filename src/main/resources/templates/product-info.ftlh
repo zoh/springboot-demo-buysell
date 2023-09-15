@@ -16,6 +16,12 @@
 <p>Город: ${product.city}</p>
 <p>Цена: ${product.price}</p>
 
+
+<hr>
+<#list images as image>
+    <img src="/images/${ image.id }" alt="${ image.name }">
+</#list>
+
 <form method="post" action="/product/${ product.id }/delete" >
     <button type="submit">Удалить</button>
 </form>
